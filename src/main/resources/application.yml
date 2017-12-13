@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    stream:
+      overrideCloudConnectors: true
+      binders:
+        rabbit-primary:
+          type: rabbit
+          environment:
+            spring:
+              rabbitmq:
+                addresses: username:pwd@somehost.cloudamqp.com:5671/uniquename
+                ssl:
+                  enabled: true
